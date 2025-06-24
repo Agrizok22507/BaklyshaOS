@@ -4,6 +4,7 @@ current_user = "User"
 
 print("Hi from BaklyshaOS!")
 def cc():
+    global current_user
     command = c
     two = command.split()
     if command == "clear":
@@ -24,13 +25,14 @@ def cc():
         current_user == "User"
         print("Succes")
     elif command == "rm":
+        rrr = input("PATH : ")
         if current_user == "User":
             print("Access denied, please write 'root'")
         elif current_user == "Root":
-            g = input(f"You sure remove file or directory '{two[1]}'(Y/N) ")
+            g = input(f"You sure remove file or directory '{rrr}'(Y/N) ")
             if g == "Y":
                 try:
-                    os.remove(two[1])
+                    os.remove(rrr)
                     print("Succes")
                 except Exception as e:
                     print(f"E : {e}")
@@ -40,6 +42,7 @@ def cc():
                 print("Unknown choose...")
     else:
         print("Unknown command...")
+    return current_user
 
 while True:
     c = input(f"BaklyshaOS@{current_user}> ")
