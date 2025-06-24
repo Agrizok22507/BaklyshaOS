@@ -1,13 +1,13 @@
-# BaklyshaOS.py
 import os
 
 current_user = "User"
 
 print("Hi from BaklyshaOS!")
-def cc(command):
-    two = command.split[1]
-    if command == "clear" or "cls":
-        os.system("clear")
+def cc():
+    command = c
+    two = command.split()
+    if command == "clear":
+        os.system("cls")
     elif command == "hi":
         print("Hi!")
     elif command == "root":
@@ -27,10 +27,10 @@ def cc(command):
         if current_user == "User":
             print("Access denied, please write 'root'")
         elif current_user == "Root":
-            g = input(f"You sure remove file or directory '{two}'(Y/N) ")
+            g = input(f"You sure remove file or directory '{two[1]}'(Y/N) ")
             if g == "Y":
                 try:
-                    os.remove(two)
+                    os.remove(two[1])
                     print("Succes")
                 except Exception as e:
                     print(f"E : {e}")
@@ -43,4 +43,4 @@ def cc(command):
 
 while True:
     c = input(f"BaklyshaOS@{current_user}> ")
-    cc(command=c)
+    cc()
