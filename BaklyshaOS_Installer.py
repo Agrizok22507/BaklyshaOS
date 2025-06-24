@@ -1,4 +1,3 @@
-# BaklyshaOS_Installer.py
 import os
 import time
 
@@ -32,7 +31,7 @@ def ccccc():
         ccccc()
     elif cccc == "Y":
         print("Ok, installation...")
-        os.system("git clone ")
+        os.system("git clone https://github.com/Agrizok22507/BaklyshaOS.git")
         print("Finish! This window will be closed in 5 seconds")
         time.sleep(5)
     else:
